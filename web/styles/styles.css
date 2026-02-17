@@ -1,0 +1,190 @@
+/* ================== FONDO GENERAL ================== */
+/* Define la tipografía, elimina márgenes y rellenos por defecto,
+   establece fondo negro y texto blanco en toda la página */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* fondo negro */
+  color: #fff; /* texto blanco */
+}
+
+/* ================== BARRA DE NAVEGACIÓN ================== */
+.navbar {
+  background-color: #000; /* color de fondo negro */
+  display: flex; /* usa flexbox para organizar elementos */
+  justify-content: space-between; /* separa logo, nombre y menú */
+  align-items: center; /* centra verticalmente */
+  padding: 15px 30px; /* espacio interno */
+  border-bottom: 2px solid #E30613; /* línea roja inferior */
+}
+
+.logo img {
+  height: 50px; /* tamaño del logo */
+}
+
+.brand-name {
+  color: #E30613; /* color rojo corporativo */
+  font-size: 1.5em; /* tamaño de fuente */
+  font-weight: bold; /* texto en negrita */
+  text-align: center; /* centrado */
+  flex: 1; /* ocupa espacio flexible */
+}
+
+.nav-links {
+  list-style: none; /* elimina viñetas */
+  display: flex; /* organiza enlaces en fila */
+  gap: 20px; /* espacio entre enlaces */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none; /* elimina subrayado */
+  color: #fff; /* texto blanco */
+  font-weight: 500; /* peso medio */
+}
+
+.nav-links a:hover {
+  color: #E30613; /* cambia a rojo al pasar el mouse */
+}
+
+/* ================== SLIDER INFINITO ================== */
+.slider {
+  overflow: hidden; /* oculta contenido que se desborda */
+  position: relative;
+  width: 100%; /* ocupa todo el ancho */
+  background-color: #000; /* fondo negro */
+}
+
+.slide-track {
+  display: flex; /* organiza imágenes en fila */
+  width: 300%; /* ancho extendido para duplicar imágenes */
+  animation: scroll 30s linear infinite; /* animación infinita */
+}
+
+.slide-track img {
+  width: 20%;       /* 5 imágenes → cada una ocupa 20% */
+  height: auto;     /* mantiene proporción original */
+  object-fit: contain; /* ajusta sin recortar */
+  background-color: #000; /* relleno negro elegante */
+}
+
+/* Animación infinita para el slider */
+@keyframes scroll {
+  0%   { transform: translateX(0); } /* inicio */
+  100% { transform: translateX(-50%); } /* se mueve a la izquierda */
+}
+
+/* ================== SECCIÓN DE SERVICIOS ================== */
+.servicios {
+  padding: 50px; /* espacio interno */
+  background-color: #111; /* gris oscuro */
+  text-align: center; /* centra títulos */
+}
+
+.servicios h2 {
+  color: #E30613; /* rojo corporativo */
+  margin-bottom: 30px; /* espacio inferior */
+}
+
+.servicios-grid {
+  display: grid; /* usa grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* columnas adaptables */
+  gap: 30px; /* espacio entre tarjetas */
+}
+
+.servicio {
+  background-color: #222; /* gris más oscuro */
+  padding: 20px; /* espacio interno */
+  border-radius: 8px; /* esquinas redondeadas */
+  color: #fff; /* texto blanco */
+  text-align: left; /* contenido alineado a la izquierda */
+}
+
+.servicio img {
+  width: 100%; /* imagen ocupa todo el ancho */
+  height: 180px; /* altura fija */
+  object-fit: cover; /* recorta para llenar */
+  border-radius: 6px; /* esquinas redondeadas */
+  margin-bottom: 15px; /* espacio inferior */
+}
+
+.servicio h3 {
+  color: #E30613; /* rojo corporativo */
+  margin-bottom: 10px; /* espacio inferior */
+}
+
+.servicio p {
+  font-size: 0.95em; /* tamaño de fuente ligeramente menor */
+  line-height: 1.5; /* altura de línea para legibilidad */
+  margin-bottom: 10px; /* espacio inferior */
+}
+
+/* ================== SECCIÓN DE CONTACTO ================== */
+.contacto {
+  padding: 50px; /* espacio interno */
+  background-color: #000; /* fondo negro */
+  text-align: center; /* centra contenido */
+}
+
+.contacto h2 {
+  color: #25D366; /* verde WhatsApp */
+}
+
+.btn-whatsapp {
+  display: inline-block; /* se comporta como bloque en línea */
+  margin-top: 20px; /* espacio superior */
+  padding: 10px 20px; /* espacio interno */
+  background-color: #25D366; /* verde WhatsApp */
+  color: #fff; /* texto blanco */
+  text-decoration: none; /* sin subrayado */
+  border-radius: 5px; /* esquinas redondeadas */
+}
+
+/* ================== FOOTER ================== */
+footer {
+  background-color: #111; /* gris oscuro */
+  text-align: center; /* centra texto */
+  padding: 20px; /* espacio interno */
+  color: #555; /* gris claro para texto */
+}
+
+/* ================== BOTÓN FLOTANTE ================== */
+.btn-flotante {
+  position: fixed; /* siempre visible en pantalla */
+  bottom: 20px; /* distancia desde abajo */
+  right: 20px; /* distancia desde la derecha */
+  background-color: #25D366; /* verde WhatsApp */
+  color: #fff; /* texto blanco */
+  font-size: 24px; /* tamaño del ícono/texto */
+  text-decoration: none; /* sin subrayado */
+  padding: 15px 20px; /* espacio interno */
+  border-radius: 50%; /* forma circular */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
+  z-index: 1000; /* siempre encima */
+}
+
+.btn-flotante:hover {
+  transform: scale(1.1); /* aumenta tamaño al pasar el mouse */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.4); /* sombra más intensa */
+}
+.resaltado {
+  color: #E30613; /* rojo corporativo */
+  font-weight: bold;
+}
+.btn-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #E30613;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+.btn-cta:hover {
+  background-color: #b0040f;
+}
